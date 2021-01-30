@@ -1,20 +1,11 @@
 import React from 'react';
-import {fetchUsers, removeUserItem} from '../../redux/actions/action';
-import {useSelector, useDispatch} from 'react-redux';
+import {removeUserItem} from '../../redux/actions/action';
+import {useDispatch} from 'react-redux';
 
 import UserListItem from './UserListItem';
 
-const UserList = () => {
+const UserList = ({users}) => {
     const dispatch = useDispatch();
-    const users = useSelector(({data}) => data.items);
-
-    console.log(users);
-
-    React.useEffect(() => {
-        if (users === null) {
-        dispatch(fetchUsers());
-        } 
-    }, [dispatch, users]);
 
     const onRemoveItem = (id) => {
         dispatch(removeUserItem(id));

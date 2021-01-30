@@ -32,3 +32,13 @@ export const removeUserItem = (id) => ({
     type: 'REMOVE_USER_ITEM',
     payload: id,
 });
+
+export const changeUser = (obj) => ({
+    type: 'CHANGE_USER',
+    payload: obj,
+});
+
+export const addNewUser = (obj) => ({
+    type: 'ADD_NEW_USER',
+    payload: obj,
+});

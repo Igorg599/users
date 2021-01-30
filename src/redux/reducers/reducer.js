@@ -39,10 +39,30 @@ const data = (state = initialState, action) => {
             };
 
         case 'REMOVE_USER_ITEM':
-            const newItems = state.items.filter((item) => item.id !== action.payload);
+            const newItemsRemove = state.items.filter((item) => item.id !== action.payload);
             return {
                 ...state,
-                items: newItems,
+                items: newItemsRemove,
+            };
+        
+        case 'CHANGE_USER':
+            const newItems = [action.payload];
+            const replacedItems = state.items.map(e => {
+                if (newItems.some(({ id }) => id === e.id)) {
+                  return newItems.find(({ id }) => id === e.id);
+                }
+                return e;
+            });
+            return {
+                ...state,
+                items: replacedItems,
+            };
+
+        case 'ADD_NEW_USER':
+            const newUser = [...state.items, action.payload]; 
+            return {
+                ...state,
+                items: newUser,
             };
 
         default:
