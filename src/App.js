@@ -1,19 +1,13 @@
 import React from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import {fetchUsers} from './redux/actions/action';
+import Header from './components/Header/';
+import UserList from './components/UserList';
+
 
 function App() {
-  const dispatch = useDispatch();
-  const users = useSelector(({users}) => users.items);
-  console.log(users);
-
-  React.useEffect(() => {
-    dispatch(fetchUsers());
-  }, [dispatch]);
-
   return (
-    <div className="App">
-      1
+    <div className="wrapper">
+      <Header/>
+      <UserList/>
     </div>
   );
 }
