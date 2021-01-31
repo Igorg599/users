@@ -38,6 +38,10 @@ const UserModal = ({active, setActive}) => {
         dispatch(addNewUser(newobj));
         setActive(false);
         document.body.style.overflow = 'visible';
+        setNewName('');
+        setNewAge('');
+        setNewSex('');
+        setNewPosition('');
     }
 
     return (
