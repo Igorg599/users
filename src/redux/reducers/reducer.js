@@ -14,28 +14,28 @@ const data = (state = initialState, action) => {
             const newItemsName = state.items.sort((a, b) => a.name > b.name ? 1 : -1);
             return {
                 ...state,
-                items: newItemsName,
+                items: [...newItemsName]
             };
 
         case 'SORT_USERS_AGE':
             const newItemsAge = state.items.sort((a, b) => a.age > b.age ? 1 : -1);
             return {
                 ...state,
-                items: newItemsAge,
+                items: [...newItemsAge]
             };
 
         case 'SORT_USERS_SEX':
             const newItemsSex = state.items.sort((a, b) => a.sex > b.sex ? 1 : -1);
             return {
                 ...state,
-                items: newItemsSex,
+                items: [...newItemsSex]
             };
 
         case 'SORT_USERS_POSITION':
             const newItemsPosition = state.items.sort((a, b) => a.position > b.position ? 1 : -1);
             return {
                 ...state,
-                items: newItemsPosition,
+                items: [...newItemsPosition]
             };
 
         case 'REMOVE_USER_ITEM':

@@ -54,16 +54,16 @@ const UserModal = ({active, setActive}) => {
                         </div>
                         <div>
                             <div className='modal__content-form-input'>
-                                <TextField type='text' onChange={onValueNameChange} value={newName} label="имя" id="outlined-size-small" variant="outlined" size="small" required/>
+                                <TextField type='text' onChange={onValueNameChange} value={newName} label="имя" variant="outlined" size="small" required/>
                             </div>
                             <div className='modal__content-form-input'>
-                                <TextField type='number' onChange={onValueNameAge} value={newAge} label="возраст" id="outlined-size-small" variant="outlined" size="small" required/>
+                                <TextField type='number' onChange={onValueNameAge} value={newAge} label="возраст" variant="outlined" size="small" required/>
                             </div>
                             <div className='modal__content-form-input'>
-                                <TextField type='text' onChange={onValueNameSex} value={newSex} label="пол" id="outlined-size-small" variant="outlined" size="small" required/>
+                                <TextField type='text' onChange={onValueNameSex} value={newSex} label="пол" variant="outlined" size="small" required/>
                             </div>
                             <div className='modal__content-form-input'>
-                                <TextField type='text' onChange={onValueNamePosition} value={newPosition} label="должность" id="outlined-size-small"  variant="outlined" size="small" required/>
+                                <TextField type='text' onChange={onValueNamePosition} value={newPosition} label="должность" variant="outlined" size="small" required/>
                             </div>
                         </div>
                     </div>

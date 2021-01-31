@@ -29,11 +29,11 @@ code {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   &__item {
     position: relative;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     box-sizing: border-box;
     touch-action: manipulation;
     height: 180px;
