@@ -98,6 +98,13 @@ code {
       cursor: pointer;
       outline: none;
     }
+    &-number {
+      position: absolute;
+      left: 5px;
+      top: 3px;
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
   &__title {
     display: flex;
@@ -108,7 +115,7 @@ code {
 
 .userlisttable {
   display: block;
-  width: 900px;
+  width: 950px;
   margin: 0 auto;
   &-title {
     display: flex;
@@ -185,6 +192,13 @@ code {
       border: none;
       cursor: pointer;
       outline: none;
+    }
+    &-number {
+      position: absolute;
+      left: 49px;
+      top: 15px;
+      font-size: 14px;
+      font-weight: 500;
     }
   }
 }

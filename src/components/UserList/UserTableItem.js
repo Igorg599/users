@@ -73,6 +73,7 @@ const UserTableItem = ({id, name, age, sex, position, onRemove, index}) => {
                     <SaveIcon color="primary"/>
                 </button>
             }
+            <div className='userlisttable__item-number'>№ {index+1}</div>
         </form>
     )
 }

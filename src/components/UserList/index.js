@@ -55,8 +55,9 @@ const UserList = ({users}) => {
             </div>
             {visibleList ?
                 <div className='userlist'>
-                    {users && users.map(item => (
+                    {users && users.map((item, index) => (
                         <UserListItem 
+                        index = {index}
                         id = {item.id}
                         name = {item.name}
                         age = {item.age}

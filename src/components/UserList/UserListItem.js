@@ -5,7 +5,7 @@ import SaveIcon from '@material-ui/icons/Save';
 import {useDispatch} from 'react-redux';
 import {changeUser} from '../../redux/actions/action';
 
-const UserListItem = ({id, name, age, sex, position, onRemove}) => {
+const UserListItem = ({id, name, age, sex, position, onRemove, index}) => {
     const dispatch = useDispatch();
     const [dataInput, setDataInput] = React.useState(true);
     const [newName, setNewName] = React.useState(name);
@@ -79,6 +79,7 @@ const UserListItem = ({id, name, age, sex, position, onRemove}) => {
                     <SaveIcon color="primary"/>
                 </button>
             }
+            <div className='userlist__item-number'>№ {index+1}</div>
         </form>
     )
 }
